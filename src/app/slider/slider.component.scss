@@ -55,6 +55,7 @@
     .disabled {
       cursor: not-allowed;
       color: lightgray;
+      transform: scaleX(0.2);
     }
 
     .header,
