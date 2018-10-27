@@ -44,6 +44,18 @@ export class GalleryComponent implements OnInit {
       extUrl: 'https://www.pexels.com/photo/two-woman-standing-on-the-ground-and-staring-at-the-mountain-669006/',
       thumbnailUrl: 'https://images.pexels.com/photos/669006/pexels-photo-669006.jpeg?w=60'
     },
+    {
+      url: 'https://images.pexels.com/photos/669013/pexels-photo-669013.jpeg?w=1260',
+      altText: 'woman-in-black-blazer-holding-blue-cup',
+      title: 'woman-in-black-blazer-holding-blue-cup',
+      thumbnailUrl: 'https://images.pexels.com/photos/669013/pexels-photo-669013.jpeg?w=60'
+    },
+    {
+      url: 'https://images.pexels.com/photos/669006/pexels-photo-669006.jpeg?w=1260',
+      altText: 'two-woman-standing-on-the-ground-and-staring-at-the-mountain',
+      extUrl: 'https://www.pexels.com/photo/two-woman-standing-on-the-ground-and-staring-at-the-mountain-669006/',
+      thumbnailUrl: 'https://images.pexels.com/photos/669006/pexels-photo-669006.jpeg?w=60'
+    },
   ];
 
   isGallery: boolean;
