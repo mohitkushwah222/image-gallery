@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="header">
+    <fa name="times-circle" class="fa-2x" (click)="close()"></fa>
+  </div>
+  <ng-container *ngFor="let item of images;let i = index">
+    <ng-container *ngIf="visibleIndex === i">
+      <fa class="fa-4x arrow" name="angle-left" [class.disabled]="i === 0" (click)="i === 0 ? '' : previous(i)"></fa>
+      <div class="img-container">
+        <img (drag)="onDrag($event)" (swipeleft)="i < images.length - 1 ?  next(i) : ''" (swiperight)="i === 0 ? '' : previous(i)"
+          (pinchin)="pinchIn()" (pinchout)="pinchout()" src="{{item.url}}" alt="{{item.alt}}" class="img">
+      </div>
+      <fa class="fa-4x arrow" name="angle-right" [class.disabled]="i === images.length - 1" (click)=" i < images.length - 1 ?  next(i) : ''"></fa>
+    </ng-container>
+  </ng-container>
+  <div class="footer">
+    <fa name="search-minus" class="fa-2x" (click)="zoomOut()"></fa>
+    <fa name="undo" class="fa-2x" (click)="rotate('left')"></fa>
+    <img src="../../assets/redo-alt-solid.svg" alt=".." (click)="rotate('right')">
+    <fa name="search-plus" class="fa-2x" (click)="zoonIn()"></fa>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<ng-container *ngIf="!isGallery;else gallery">
+  <div *ngFor="let item of images;let i = index" class="gallery">
+    <a target="_blank" (click)="open(i)">
+      <img src="{{item.url}}" alt="{{item.altText}}}" width="600" height="400">
+    </a>
+    <div class="title">Title</div>
+  </div>
+</ng-container>
+<ng-template #gallery>
+  <app-slider [@state]="state" [images]="images" (closeGallery)="isGallery = false" [visibleIndex]="visibleIndex"></app-slider>
+</ng-template>
